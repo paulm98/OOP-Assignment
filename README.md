@@ -6,5 +6,5 @@ I also then could not add sound due to processing not connecting to the server. 
 
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=hf9k0St7RRY
-" target="_blank"><img src="http://img.youtube.com/vi/watch?v=hf9k0St7RRY/0.jpg" 
+" target="_blank"><img src="http://img.youtube.com/vi/watch?v=hf9k0St7RRY.jpg" 
 alt="Assignment for OOP" width="240" height="180" border="10" /></a>
