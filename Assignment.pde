@@ -142,6 +142,8 @@ void draw()
     textSize(25);
     fill(255);
     text("Ammo:", 1300, 730);
+    text(bulletCounter, 1370,730);
+    text("/100", 1420,730);
 
 }
 
