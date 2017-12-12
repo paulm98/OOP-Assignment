@@ -35,7 +35,7 @@ class Player
     
     if (checkKey(' '))
     {
-      if(bulletCounter>100)
+      if(bulletCounter<1)
       {
         fill(255,0,0);
           textSize(30);
@@ -46,7 +46,7 @@ class Player
       PVector bp = PVector.add(pos, PVector.mult(forward, radius + 2));
       Bullet b = new Bullet(bp.x, bp.y, theta, speed * 2);
       bullets.add(b);
-      bulletCounter++;
+      bulletCounter--;
     }
     }
   }

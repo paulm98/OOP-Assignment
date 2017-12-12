@@ -10,7 +10,7 @@ color rectHighlight;
 color currentColor;
 boolean rectOver = false;
 
-int bulletCounter;
+int bulletCounter=100;
 String message = "RELOAD!!";
   PImage img;
   PImage img2;
@@ -138,6 +138,10 @@ void draw()
   
     image(img, 100, 670, 200,120);
     image(img2, 480, 30, 500,120);
+    
+    textSize(25);
+    fill(255);
+    text("Ammo:", 1300, 730);
 
 }
 
@@ -152,7 +156,7 @@ void update(int x, int y) {
 
 void mousePressed() {
   if (rectOver) {
-    bulletCounter=0;
+    bulletCounter=100;
   }
 }
 
