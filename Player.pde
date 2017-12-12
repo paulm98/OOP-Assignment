@@ -18,7 +18,7 @@ class Player
     this.speed = 10;
     this.radius = radius; 
   }
-  
+ 
   void update()
   {
     forward.x = sin(theta);
@@ -35,12 +35,23 @@ class Player
     
     if (checkKey(' '))
     {
+      if(bulletCounter>100)
+      {
+        fill(255,0,0);
+          textSize(20);
+          text(message,750,350);
+      
+      }
+      else{
       PVector bp = PVector.add(pos, PVector.mult(forward, radius + 2));
       Bullet b = new Bullet(bp.x, bp.y, theta, speed * 2);
       bullets.add(b);
-      
+      bulletCounter++;
+      textSize(12);
+    }
     }
   }
+ 
   
   void render()
   {

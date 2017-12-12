@@ -11,6 +11,7 @@ color currentColor;
 boolean rectOver = false;
 
 int bulletCounter;
+String message = "RELOAD!!";
 
 void setup()
 {
