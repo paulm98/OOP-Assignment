@@ -22,7 +22,7 @@ void setup()
   for (int i = 0; i < stars.length; i++) {
     stars[i] = new Star();}
 
-
+   
    p = new Player(width / 2, 710, 0, color(255, 0, 150), 50);
    
    rectColor = color(0);
@@ -75,6 +75,7 @@ void drawGrid()
 void draw()
 {
   
+    
   
    speed = map(height/2, 0, width*2, 0, 50);
 
@@ -121,6 +122,14 @@ void draw()
   fill(255);
   textSize(15);
   text("RELOAD",1300,100);
+    
+    noStroke();
+    fill(255,0,0);
+    ellipse(36,53,5,5);
+    ellipse(53,148,5,5);
+    ellipse(133,165,5,5);
+    ellipse(149,37,5,5);
+    ellipse(100,101,5,5);
   
 
 }
