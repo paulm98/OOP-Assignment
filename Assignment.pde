@@ -12,11 +12,16 @@ boolean rectOver = false;
 
 int bulletCounter;
 String message = "RELOAD!!";
+  PImage img;
+  PImage img2;
 
 void setup()
 {
   size(1500, 800);
-  
+
+  img = loadImage("1.jpg");
+  img2 = loadImage("2.jpg");
+
   // I fill the array with a for loop;
   // running 800 times, it creates a new star using the Star() class.
   for (int i = 0; i < stars.length; i++) {
@@ -131,6 +136,8 @@ void draw()
     ellipse(149,37,5,5);
     ellipse(100,101,5,5);
   
+    image(img, 100, 670, 200,120);
+    image(img2, 480, 30, 500,120);
 
 }
 
