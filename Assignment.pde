@@ -1,6 +1,16 @@
+import processing.sound.*;
+
 Star[] stars = new Star[800];
 
 float speed;
+
+int rectX, rectY;      // Position of square button  
+color rectColor, baseColor;
+color rectHighlight;
+color currentColor;
+boolean rectOver = false;
+
+int bulletCounter;
 
 void setup()
 {
@@ -12,7 +22,14 @@ void setup()
     stars[i] = new Star();}
 
 
-p = new Player(width / 2, 710, 0, color(255, 0, 150), 50);
+   p = new Player(width / 2, 710, 0, color(255, 0, 150), 50);
+   
+   rectColor = color(0);
+   rectHighlight = color(51);
+   baseColor = color(102);
+   currentColor = baseColor;
+   rectX = 1300-90-10;
+   rectY = 100-90/2;
 }
 
 boolean keys[] = new boolean[1024];
@@ -22,6 +39,7 @@ ArrayList<Bullet> bullets = new ArrayList<Bullet>();
 
 void keyPressed()
 {
+  
   keys[keyCode] = true;
 }
 
@@ -78,6 +96,8 @@ void draw()
    fill(100);
    rect(0,650,1500,200);
    
+   
+   
   
   p.update();
   p.render();
@@ -87,7 +107,41 @@ void draw()
     fill(255);
     drawGrid();
     
+     update(mouseX, mouseY);
+  
+  if (rectOver) {
+    fill(rectHighlight);
+  } else {
+    fill(rectColor);
+  }
+  stroke(255);
+  rect(rectX, rectY, 200, 90);
+  fill(255);
+  text("RELOAD",1300,100);
+  
+
+}
 
 
+void update(int x, int y) {
+  if ( overRect(rectX, rectY, 200, 90) ) {
+    rectOver = true;
+  } else {
+    rectOver = false;
+  }
+}
 
+void mousePressed() {
+  if (rectOver) {
+    bulletCounter=0;
+  }
+}
+
+boolean overRect(int x, int y, int width, int height)  {
+  if (mouseX >= x && mouseX <= x+width && 
+      mouseY >= y && mouseY <= y+height) {
+    return true;
+  } else {
+    return false;
+  }
 }

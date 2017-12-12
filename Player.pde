@@ -38,6 +38,7 @@ class Player
       PVector bp = PVector.add(pos, PVector.mult(forward, radius + 2));
       Bullet b = new Bullet(bp.x, bp.y, theta, speed * 2);
       bullets.add(b);
+      
     }
   }
   
