@@ -38,8 +38,8 @@ class Player
       if(bulletCounter>100)
       {
         fill(255,0,0);
-          textSize(20);
-          text(message,750,350);
+          textSize(30);
+          text(message,750,400);
       
       }
       else{
@@ -47,7 +47,6 @@ class Player
       Bullet b = new Bullet(bp.x, bp.y, theta, speed * 2);
       bullets.add(b);
       bulletCounter++;
-      textSize(12);
     }
     }
   }

@@ -63,6 +63,7 @@ void drawGrid()
   for(int xg = -5 ; xg <= 5 ; xg ++)
   {
     float pos = map(xg, -5, 5, border, 200 - border); 
+    textSize(12);
     text(xg, pos, border * 0.5);
     text(xg, border * 0.5, pos);
     
@@ -118,6 +119,7 @@ void draw()
   stroke(255);
   rect(rectX, rectY, 200, 90);
   fill(255);
+  textSize(15);
   text("RELOAD",1300,100);
   
 
